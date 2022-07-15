@@ -100,7 +100,11 @@ The dataframe of the dies and their weights
         Takes a parameter to specify how many times the dice should be rolled.
         Saves the result of the play to a private dataframe of shape N rolls by M dice.
         The private dataframe should have the roll number is a named index.
-'''
+'''  
+Inputs:  
+nrolls - The number of times that you want to roll the dice   
+Outputs:  
+A data frame with the result of the game 
 #### Gshow()
 '''
         This method just passes the private dataframe to the user.
@@ -112,6 +116,12 @@ The dataframe of the dies and their weights
         The wide form of the dataframe will a single column index with the roll number, 
         and each die number as a column.
 '''
+Inputs:  
+form - The orientation that you want the dataframe to appear (Either wide or narrow) Defaults to wide.  
+Outputs:   
+A data frame of the results of the game in a special way.  
+If the input is wide then the data frame comes out with die number as index and roll number as columns.  
+If the input is narrow then the data frame has multi index (die number and roll number) and one column with the faces
 
 
 ### class Analyzer
@@ -125,18 +135,38 @@ The dataframe of the dies and their weights
         Returns an integer for the number times to the user.
         Stores the results as a dataframe of jackpot results in a public attribute.
         The dataframe should have the roll number as a named index.
-'''
+'''   
+Outputs:  
+The number of jackpots from a game instance dtype(int).  
+
 #### combo()
 '''
         Combinations should be sorted and saved as a multi-columned index.
         Stores the results as a dataframe in a public attribute.
-'''
+'''  
+Outputs:  
+A data frame with every combination of faces from a game instance and their value counts
 #### face_counts_per_roll()
  '''
         Stores the results as a dataframe in a public attribute.
         The dataframe has an index of the roll number and face values as columns (i.e. it is in wide format).
 '''
+Outputs:   
+A data frame with a value count for each face on each roll 
 
 
 
 ## Manifest
+Montecarlo Project   
+.gitignore  
+LICENSE  
+README.md  
+setup.py  
+MC Package/  
+__init__.py  
+montecarlo.py  
+montecarlo_demo.ipynb  
+Test/  
+__init__.py  
+montecarlo_test.txt  
+montecarlo__test.py  
